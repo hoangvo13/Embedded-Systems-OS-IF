@@ -35,14 +35,15 @@ int main(void)
 			}
 		}
 		
-		if (!(PINB & (1<<PINB2))) // Blinking the LED 10 times with 1Hz frequency
+	    // Blinking the LED 10 times with 5Hz frequency
+		if (!(PINB & (1<<PINB2))) 
 		{
 			for (int y=0; y<10; y++)
 			{
 				LED_ON;
-				_delay_ms(1000);
+				_delay_ms(5000);
 				LED_OFF;
-				_delay_ms(1000);
+				_delay_ms(5000);
 			}
 		}
     }
